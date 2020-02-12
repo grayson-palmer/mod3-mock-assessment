@@ -1,7 +1,29 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
+import { Reservations } from '../Reservations/Reservations.js';
+import { fetchReservations } from '../apiCalls/apiCalls.js';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      reservations: []
+    };
+  }
+
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+
+  getReservations() {
+    fetchReservations()
+      .then(data => this.setState({reservations: data}))
+  }
+
+  componentDidMount() {
+    this.getReservations();
+  }
+  
   render() {
     return (
       <div className="App">
@@ -10,7 +32,7 @@ class App extends Component {
 
         </div>
         <div className='resy-container'>
-          
+          <Reservations reservationData={this.state.reservations} />
         </div>
       </div>
     )
