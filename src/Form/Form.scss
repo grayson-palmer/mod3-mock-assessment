@@ -1,0 +1,18 @@
+.form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: 2em;
+  width: 100%;
+  > input {
+    font-size: 1em;
+    padding: 0.25em;
+    width: 12em;
+  }
+  &__button {
+    background-color: teal;
+    color: white;
+    font-size: 1em;
+    width: 12em;
+  }
+}
