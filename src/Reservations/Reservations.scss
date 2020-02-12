@@ -1,0 +1,18 @@
+@import '../styles/variables.scss';
+
+.reservation {
+  background-color: white;
+  border: 0.25em teal solid;
+  border-radius: 0.5em;
+  color: teal;
+  margin: 1em;
+  width: 15em;
+  &__cancel {
+    background-color: teal;
+    color: white;
+    font-size: 1em;
+    margin: 0 0 1em;
+    padding: 0.25em;
+    width: 80%;
+  }
+}
