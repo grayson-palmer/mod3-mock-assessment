@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should be a snapshot of the form element 1`] = `
+<div
+  className="form"
+>
+  <input
+    className="form__name"
+    name="name"
+    onChange={[Function]}
+    placeholder="Name"
+    type="text"
+  />
+  <input
+    className="form__name"
+    name="date"
+    onChange={[Function]}
+    placeholder="Date (mm/dd)"
+    type="text"
+  />
+  <input
+    className="form__name"
+    name="time"
+    onChange={[Function]}
+    placeholder="Time"
+    type="text"
+  />
+  <input
+    className="form__name"
+    name="number"
+    onChange={[Function]}
+    placeholder="Number of Guests"
+    type="text"
+  />
+  <button
+    className="form__button"
+    onClick={[Function]}
+    type="button"
+  >
+    Make Reservation
+  </button>
+</div>
+`;
