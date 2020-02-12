@@ -11,11 +11,7 @@ class App extends Component {
       reservations: []
     };
   }
-
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-
+  
   getReservations() {
     fetchReservations()
       .then(data => this.setState({reservations: data}))
@@ -40,7 +36,7 @@ class App extends Component {
           <Form addReservation={this.addReservation}/>
         </div>
         <div className='resy-container'>
-          <Reservations reservations={this.state.reservations} />
+          <Reservations reservationData={this.state.reservations} />
         </div>
       </div>
     )

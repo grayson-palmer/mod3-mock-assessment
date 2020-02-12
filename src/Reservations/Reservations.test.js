@@ -1,5 +1,5 @@
 import React from 'react';
-import Reservations from './Reservations.js';
+import { Reservations } from './Reservations.js';
 import { shallow } from 'enzyme';
 
 describe('Form', () => {
@@ -14,14 +14,12 @@ describe('Form', () => {
     }
   ]
 
-  // beforeEach(() => {
-  //   wrapper = shallow(<Reservations reservations={mockReservationData} />);
-  // })
-
-  it ('should be a snapshot of the form element', () => {
-    wrapper = shallow(<Reservations reservations={mockReservationData} />);
-    expect(wrapper).toMatchSnapshot();
+  beforeEach(() => {
+    wrapper = shallow(<Reservations reservationData={mockReservationData} />);
   })
 
+  it ('should be a snapshot of the reservation element', () => {
+    expect(wrapper).toMatchSnapshot();
+  })
   
 })
