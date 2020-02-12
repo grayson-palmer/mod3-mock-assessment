@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form should be a snapshot of the reservation element 1`] = `
+<div
+  className="reservation"
+  key="1"
+>
+  <h3
+    className="reservation__name"
+  >
+    Christie
+  </h3>
+  <p
+    className="reservation__date"
+  >
+    12/29
+  </p>
+  <p
+    className="reservation__time"
+  >
+    7:00
+     PM
+  </p>
+  <p
+    className="reservation__number"
+  >
+    Number of Guests: 
+    12
+  </p>
+  <button
+    className="reservation__cancel"
+    type="button"
+  >
+    Cancel
+  </button>
+</div>
+`;

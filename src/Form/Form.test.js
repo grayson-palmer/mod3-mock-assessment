@@ -15,14 +15,17 @@ describe('Form', () => {
   })
 
   it ('should handle changes in the state', () => {
-    const startState = {
-      name: 'Grayson',
-      date: '03/08',
-      time: '8:00',
-      number: 2
-    }
+    const startState = { reservations: []}
     wrapper.setState(startState);
     wrapper.instance().resetInputs();
-    expect(wrapper.state('title')).toEqual('');
+    expect(wrapper.state('name')).toEqual('');
+    expect(wrapper.state('date')).toEqual('');
+    expect(wrapper.state('time')).toEqual('');
+    expect(wrapper.state('number')).toEqual('');
+  })
+
+  it ('should call the add reservation function on button click', () => {
+    wrapper.find('.form__button').simulate('click')
+    expect(wrapper.addReservation).toHaveBeenCalled();
   })
 })
